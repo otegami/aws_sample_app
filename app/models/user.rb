@@ -54,6 +54,11 @@ class User < ApplicationRecord
   
   def send_password_reset_eamil
     UserMailer.password_reset(self).deliver_now
+  end
+  
+  # return true when time is expired about password's reset
+  def password_reset_expired?
+    reset_sent_at < 2.hours.ago
   end  
   
 private
