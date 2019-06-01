@@ -62,6 +62,10 @@ class User < ApplicationRecord
   # return true when time is expired about password's reset
   def password_reset_expired?
     reset_sent_at < 2.hours.ago
+  end
+  
+  def feed
+    Micropost.where("user_id = ?", id)
   end  
   
 private
