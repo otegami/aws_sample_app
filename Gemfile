@@ -12,6 +12,10 @@ gem 'rails', '5.1.6'
 gem 'bcrypt', '3.1.12'
 # Create faker user accouts
 gem 'faker'
+# User image uploder
+gem 'carrierwave', '1.2.2'
+# Resize image
+gem 'mini_magick', '4.7.0'
 # User pagination gem
 gem 'will_paginate', '3.1.6'
 gem 'bootstrap-will_paginate', '1.0.0'
@@ -72,6 +76,8 @@ end
 
 group :production do
   gem 'pg', '0.20.0'
+  # gem upload image in production
+  gem 'fog', '1.42'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
