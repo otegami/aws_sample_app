@@ -13,7 +13,7 @@ gem 'bcrypt', '3.1.12'
 # Create faker user accouts
 gem 'faker'
 # User image uploder
-gem 'carrierwave', '1.2.2'
+gem 'carrierwave', '1.3.2'
 # Resize image
 gem 'mini_magick', '4.7.0'
 # User pagination gem
